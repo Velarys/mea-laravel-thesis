@@ -1,0 +1,374 @@
+/*!
+ * Start Bootstrap - Full Slider HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+
+@import url(https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700);
+
+
+
+/*Carousel*/
+
+html,
+body {
+    height: 105%;
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+
+#carousel_fade{
+  position:fixed;
+
+}
+
+.carousel,
+.item,
+.active {
+    z-index: 0!important;
+    height: 100%;
+}
+
+.carousel-inner {
+    z-index: 0!important;
+    height: 100%;
+}
+
+
+
+.fill {
+    z-index: 0!important;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.carousel.carousel-fade .item {
+    z-index: 0!important;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-ms-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+	opacity:0;
+}
+
+.carousel.carousel-fade .active.item {
+    z-index: 0!important;
+	opacity:1;
+}
+
+.carousel.carousel-fade .active.left,
+.carousel.carousel-fade .active.right {
+    z-index: 0!important;
+	left: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.carousel.carousel-fade .next,
+.carousel.carousel-fade .prev {
+    z-index: 0!important;
+	left: 0;
+}
+
+.carousel.carousel-fade .carousel-control {
+	z-index: 0!important;
+}
+
+
+/*MODAL*/
+
+#btn1{
+    box-sizing: none; 
+  background-color: transparent; 
+outline: none;
+    border-style:hidden;
+    background-color:transparent;
+}
+
+#btn1:hover { color:#4a89dc; }
+
+
+.modal1{ 
+  position: absolute !important;
+ z-index: 3!important;
+  top:85%;
+    margin: auto !important;
+    float: none;
+  width:100%;
+    text-align:center;
+}
+
+.modal-backdrop {
+  z-index: 0;
+}
+
+.modal-content{
+ z-index: 3;
+    
+}
+
+
+/*FORM AND TEXT*/
+
+
+.row{
+    padding-top: 7% !important;
+    
+}
+
+#text{
+    position: relative;
+      z-index: 2!important;  
+     margin : auto auto 0 25% !important;/*margin: [top] [right] [bottom] [left]*/
+}
+
+#form{
+    position: relative;
+      z-index: 2!important;  
+     margin : auto auto 0 auto !important;/*margin: [top] [right] [bottom] [left]*/
+}
+
+
+/* Footer*/
+
+.jumbotron{
+position:absolute;
+z-index:2;
+background: rgba(250,250,250,0.2); 
+ 
+ /*255,255,255, 0.5*/
+ /* 250,250,250,0.9*/
+  /*0,0,0,0.2*/
+  /*245, 245, 245, 0.4 */
+background-size:cover !important; ; /* width, height  */
+width:100%;
+height: 100% !important; 
+}
+
+.overlay { 
+  color:#CCC;
+  position: absolute;
+ z-index: 2;
+  top:90%;
+  width:100%;
+  text-align:center;
+}
+
+.overlay >a{
+     color: #000000;
+    text-decoration: none;
+}
+
+/* Form*/
+
+/*#form{
+  display: inline-block!important;
+    z-index:2;
+    margin : 50px auto 0 auto !important;margin: [top] [right] [bottom] [left]
+    float:none!important;
+    
+    
+}*/
+form {
+    color: #4a89dc;
+    text-align: center;
+	max-width: 350px;
+	/*margin: 4em auto;*/
+	padding: 3em 2em 2em 2em;
+	background: #fafafa;
+	border: 1px solid #ebebeb;
+	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+}
+
+.group { 
+	position: relative; 
+	margin-bottom: 45px; 
+}
+
+input {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	-webkit-appearance: none;
+	display: block;
+	background: #fafafa;
+	color: #636363;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid #757575;
+}
+
+input:focus { outline: none; }
+
+
+/* Label */
+
+label {
+	color: #999; 
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 10px;
+	transition: all 0.2s ease;
+}
+
+
+/* active */
+
+input:focus ~ label, input.used ~ label {
+	top: -20px;
+  transform: scale(.75); left: -2px;
+	/* font-size: 14px; */
+	color: #4a89dc;
+}
+
+
+/* Underline */
+
+.bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.bar:before, .bar:after {
+	content: '';
+	height: 2px; 
+	width: 0;
+	bottom: 1px; 
+	position: absolute;
+	background: #4a89dc; 
+	transition: all 0.2s ease;
+}
+
+.bar:before { left: 50%; }
+
+.bar:after { right: 50%; }
+
+
+/* active */
+
+input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
+
+
+/* Highlight */
+
+.highlight {
+	position: absolute;
+	height: 60%; 
+	width: 100px; 
+	top: 25%; 
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+
+/* active */
+
+input:focus ~ .highlight {
+	animation: inputHighlighter 0.3s ease;
+}
+
+
+/* Animations */
+
+@keyframes inputHighlighter {
+	from { background: #4a89dc; }
+	to 	{ width: 0; background: transparent; }
+}
+
+
+/* Button */
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  margin: .3em 0 1em 0;
+  width: 100%;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  letter-spacing: 1px;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #3160B6;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.button:focus { outline: 0; }
+
+
+/* Button modifiers */
+
+.buttonBlue {
+  background: #4a89dc;
+  text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
+}
+
+.buttonBlue:hover { background: #357bd8; }
+
+
+/* Ripples container */
+
+.ripples {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+
+/* Ripples circle */
+
+.ripplesCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.ripples.is-active .ripplesCircle {
+  animation: ripples .4s ease-in;
+}
+
+
+/* Ripples animation */
+
+@keyframes ripples {
+  0% { opacity: 0; }
+
+  25% { opacity: 1; }
+
+  100% {
+    width: 200%;
+    padding-bottom: 200%;
+    opacity: 0;
+  }
+}
+
+
+
+
+
